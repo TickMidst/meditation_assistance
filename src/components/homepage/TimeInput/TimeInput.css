@@ -1,0 +1,19 @@
+.timeInputWrapper {
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    margin: 10px 0;
+}
+
+.timeInput {
+    width: 100px;
+    height: 50px;
+    font-size: large;
+    margin: 0 10px;
+}
+
+
+.startStop {
+    display: flex;
+    flex-direction: row;
+}

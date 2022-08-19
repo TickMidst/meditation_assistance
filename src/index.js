@@ -3,11 +3,21 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import {Provider} from 'react-redux'
+import store from './store/store'
+
 
 ReactDOM.render(
-  <React.StrictMode>
+  
+    <Provider store = {store} >
+
+      {/* сюда ли его? */}
+      <meta
+name="viewport"
+content="width=device-width, initial-scale=1.0"></meta>
     <App />
-  </React.StrictMode>,
+    </Provider>
+  ,
   document.getElementById('root')
 );
 

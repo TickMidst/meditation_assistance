@@ -1,0 +1,46 @@
+.logoImg {
+    width: 100px; 
+}
+
+.logoEl {
+  margin: 0 auto;
+}
+
+
+.header {
+  background-color: rgb(107, 45, 126);
+  height: 100%;
+}
+
+.headerHeader {
+  display: flex;
+  align-items: center;
+}
+
+.headerElements {
+  display: flex;
+  flex-direction: column;
+  padding-top: 5px;
+  width: 200px;
+  justify-content: center;
+}
+
+.itemSU {
+margin-right: 0;
+text-transform: uppercase;  
+}
+
+.itemSU a {
+  text-decoration: none;
+  color: black;
+}
+
+.itemSU :hover {
+  color: cornflowerblue;
+}
+
+@media (max-width: 550px) {
+  .logoImg {
+    width: 50px; 
+}
+}

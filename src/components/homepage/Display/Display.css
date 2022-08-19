@@ -1,0 +1,36 @@
+@font-face {
+    font-family: 'Comfortaa';
+    font-style: normal;
+    font-weight: 300;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/comfortaa/v37/1Pt_g8LJRfWJmhDAuUsSQamb1W0lwk4S4TbMDr4fIA9c.woff2) format('woff2');
+    unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+  }
+
+.display {
+    margin: 20px auto 0;
+    width: 350px;
+    height: 300px;
+    display: flex;
+    background-color: rgb(255, 255, 255); 
+    box-shadow: var(--boxesShadows);
+    border-radius: 5%;
+    flex-direction: column;
+    font-family: 'Comfortaa';
+}
+
+
+.timerText {
+    text-align: center;
+    margin: 0 auto;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'Comfortaa';
+    font-weight: bold;
+}
+
+
+.timeLeft {
+    text-align: center;
+    font-size: xx-large;
+    font-family: 'Comfortaa';
+}

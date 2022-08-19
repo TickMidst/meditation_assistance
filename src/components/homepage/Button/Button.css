@@ -1,0 +1,15 @@
+.timerDigit {
+    background-color: rgba(53, 156, 170, 0.733);
+    border: none;
+    border-radius: 50%;
+    font-size: large;
+    padding: 10px;
+    cursor: pointer;
+    width: 50px;
+    margin: 5px;
+    color: azure;
+}
+
+.timerDigit:hover {
+    background-color: aqua;
+}

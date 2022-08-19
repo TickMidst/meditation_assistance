@@ -1,0 +1,5 @@
+.backing {
+    background-color: var(--backFieldsColor);
+    border-radius: 5%;
+    margin-top: 10px;
+}

@@ -1,0 +1,95 @@
+@font-face {
+    font-family: 'Comfortaa';
+    font-style: normal;
+    font-weight: 300;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/comfortaa/v37/1Pt_g8LJRfWJmhDAuUsSQamb1W0lwk4S4TbMDr4fIA9c.woff2) format('woff2');
+    unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+  }
+
+.pleerWrapper {
+    grid-area: PLEER;
+    display: flex;
+    justify-content: center;  
+    align-items: center;
+    flex-direction: column;
+    max-width: 325px;
+    padding: 0 10px;
+    padding-top: 20px;
+    font-family: 'Comfortaa';
+    margin: 0 10px 10px;
+    
+}
+
+.titleAndSwitcherWrapper {
+    display: flex;
+    align-items: center;
+}
+
+.playerSwitcher {
+    
+}
+
+
+.title {
+    margin-bottom: 10px;
+    font-family: 'Comfortaa';
+    margin: 0 auto;
+}
+
+.autoplaySwitch {
+    margin: 10px;
+}
+
+
+.switcherText {
+    cursor: pointer;
+    color: black;
+    user-select:none
+}
+
+.switcherText.off {
+    
+}
+
+.switcherText.on {
+    transition-delay: 1ms;
+    text-shadow: 0px 0px 4px lightgreen
+}
+
+
+.timeAndProgress {
+    width: 90%;
+}
+
+.timeInfoWrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+}
+
+
+.progressContainer {
+    border: black;
+    border-style: solid;
+    width: 100%;
+    background-color: rgb(0, 183, 255);
+
+    /* изменяет курсор при наводе */
+    cursor: pointer;
+    height: 8px;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+}
+
+.progress {
+    background: black;
+    border-radius: 5px;
+    height: 6px;
+
+}
+
+
+

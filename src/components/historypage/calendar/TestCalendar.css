@@ -1,0 +1,68 @@
+@font-face {
+    font-family: 'Comfortaa';
+    font-style: normal;
+    font-weight: 300;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/comfortaa/v37/1Pt_g8LJRfWJmhDAuUsSQamb1W0lwk4S4TbMDr4fIA9c.woff2) format('woff2');
+    unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+  }
+
+
+.el {
+    border: 1px;
+    border-style: solid;
+    width: 40px;
+    height: 30px;
+    padding: 10px;
+    background-color: var(--backFieldsColor);
+}
+
+.dayOfWeek {
+    border: 1px;
+    border-style: solid;
+    width: 40px;
+    height: 20px;
+    padding: 10px;
+    background-color: var(--secondElementsColor);
+}
+.dayOfWeek:first-child {
+    border-top-left-radius: 20%;
+}
+
+.dayOfWeek:last-child {
+    border-top-right-radius: 20%;
+}
+
+
+.el.active {
+    background-color: gold;
+}
+
+.calendar_container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.one_Month {
+    display: grid;
+    text-align: right;
+    grid-template-columns: repeat(7, minmax(45px, 60px));
+}
+
+
+.one_Month_container {
+    margin-right: 30px;
+
+}
+
+.meditationRecord {
+    border-top: rgb(42, 33, 44);
+    border-style: solid;
+}
+
+.calendar_Header {
+    display: grid;
+    text-align: center;
+}
+
+

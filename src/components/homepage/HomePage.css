@@ -1,0 +1,18 @@
+.homePage {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.timerElementsWrapper {
+    min-width: 325px;
+}
+
+
+.timerComponent {
+
+}
+
+.playerOpener {
+    
+}
