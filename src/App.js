@@ -1,5 +1,5 @@
 import './App.css';
-import { Route, BrowserRouter, Routes } from 'react-router-dom';
+import {Route, Routes, HashRouter} from 'react-router-dom';
 import HistoryPageContainer from './components/historypage/HistoryPageContainer';
 import Header from './components/header/Header';
 import Footer from './components/footer/Footer';
@@ -9,7 +9,7 @@ import {SignUpPage} from './components/signup/Signup';
 
 const App = () => {
   return (
-    <BrowserRouter>
+    <HashRouter >
     <div className='bodyContainer'>
     <div className='headerComponent'>
       <Header />
@@ -30,7 +30,7 @@ const App = () => {
 
     </div>
 
-    </BrowserRouter>
+    </HashRouter>
    
   );
   }
