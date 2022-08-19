@@ -1,0 +1,36 @@
+{
+  "files": {
+    "main.css": "/meditation_assistance/static/css/main.91dd0440.chunk.css",
+    "main.js": "/meditation_assistance/static/js/main.dd3836e2.chunk.js",
+    "main.js.map": "/meditation_assistance/static/js/main.dd3836e2.chunk.js.map",
+    "runtime-main.js": "/meditation_assistance/static/js/runtime-main.5fb9b06c.js",
+    "runtime-main.js.map": "/meditation_assistance/static/js/runtime-main.5fb9b06c.js.map",
+    "static/js/2.f2bed3bc.chunk.js": "/meditation_assistance/static/js/2.f2bed3bc.chunk.js",
+    "static/js/2.f2bed3bc.chunk.js.map": "/meditation_assistance/static/js/2.f2bed3bc.chunk.js.map",
+    "static/js/3.348b93d5.chunk.js": "/meditation_assistance/static/js/3.348b93d5.chunk.js",
+    "static/js/3.348b93d5.chunk.js.map": "/meditation_assistance/static/js/3.348b93d5.chunk.js.map",
+    "index.html": "/meditation_assistance/index.html",
+    "static/css/main.91dd0440.chunk.css.map": "/meditation_assistance/static/css/main.91dd0440.chunk.css.map",
+    "static/js/2.f2bed3bc.chunk.js.LICENSE.txt": "/meditation_assistance/static/js/2.f2bed3bc.chunk.js.LICENSE.txt",
+    "static/media/Spatium.1d5b2e2a.mp3": "/meditation_assistance/static/media/Spatium.1d5b2e2a.mp3",
+    "static/media/back-button.10b44c1a.png": "/meditation_assistance/static/media/back-button.10b44c1a.png",
+    "static/media/green-tea.e71ca058.mp3": "/meditation_assistance/static/media/green-tea.e71ca058.mp3",
+    "static/media/infinitely.64e3b9e0.mp3": "/meditation_assistance/static/media/infinitely.64e3b9e0.mp3",
+    "static/media/logo.225e92d8.png": "/meditation_assistance/static/media/logo.225e92d8.png",
+    "static/media/next-button.d1151fb4.png": "/meditation_assistance/static/media/next-button.d1151fb4.png",
+    "static/media/pause-button.50b4651b.png": "/meditation_assistance/static/media/pause-button.50b4651b.png",
+    "static/media/pause-button.6a8dd9af.png": "/meditation_assistance/static/media/pause-button.6a8dd9af.png",
+    "static/media/play-button.75e18dcf.png": "/meditation_assistance/static/media/play-button.75e18dcf.png",
+    "static/media/play-button.96b68ae2.png": "/meditation_assistance/static/media/play-button.96b68ae2.png",
+    "static/media/reload.7ef3c0a2.png": "/meditation_assistance/static/media/reload.7ef3c0a2.png",
+    "static/media/sound.17bb04ea.mp3": "/meditation_assistance/static/media/sound.17bb04ea.mp3",
+    "static/media/stop-button.3070824d.png": "/meditation_assistance/static/media/stop-button.3070824d.png",
+    "static/media/stop-button.e51170ea.png": "/meditation_assistance/static/media/stop-button.e51170ea.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.5fb9b06c.js",
+    "static/js/2.f2bed3bc.chunk.js",
+    "static/css/main.91dd0440.chunk.css",
+    "static/js/main.dd3836e2.chunk.js"
+  ]
+}
