@@ -1,4 +1,4 @@
-import { connect } from 'react-redux'
+/* import { connect } from 'react-redux'
 import Calendar from './Calendar'
 import {chooseSongIndexAC, chooseCurrentSongAC} from './../../../store/store'
 
@@ -27,4 +27,4 @@ const mapDispatchToProps = (dispatch) => {
 const CalendarContainer = connect(mapStateToProps, mapDispatchToProps)(Calendar)
 
 
-export default CalendarContainer
+export default CalendarContainer */

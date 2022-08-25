@@ -44,8 +44,8 @@
 
   .mainContent {
       grid-area: M;
-      background-color: #d7f3f6;  
-
+      background-color: #d7f3f6;
+      margin-top: 75px;
   }
   
   .headerComponent {

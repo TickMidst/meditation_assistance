@@ -14,11 +14,13 @@ let TimerWrapper = (props) => {
     let [modalActive, setModalActive] = useState(false)
     let [timerIsPaused, setTimerIsPaused] = useState(false)
     let [extraTime, setExtraTime] = useState(0)
-    let [timerInterval, setTimerInterval] = useState(null)
+    let [extraTimerID, setExtraTimerID] = useState(0)
+    let [timerIntervalID, setTimerIntervalID] = useState(0)
+    let [forStory, setForStory] = useState(null)
 
     let extraTimer
     let notif = useRef()
-    let forStory = null;
+    
 
 
     let nowDate = new Date();
@@ -29,69 +31,45 @@ let TimerWrapper = (props) => {
 
 
 
-    let timer
+
+    let extraTimerStarter =()=> {
+        const newExtraTimerID = setInterval(() => {
+                setExtraTime(extraTime++)
+                console.log(extraTime)
+                
+        }, 1000)
+
+        setExtraTimerID(newExtraTimerID)
+    }
 
 
     let startTimer = (timeLeft) => {
-        if (!timer) {
+        if (!timerIntervalID) {
+            
             props.setNewTimeLeft(timeLeft)
             setTimerIsOn(true)
-            forStory = timeLeft;
+            setForStory(timeLeft)
             let decreasingTimeLeft = timeLeft
-            timer = setInterval(() => {
+            const newTimerID = setInterval(() => {
                 decreasingTimeLeft = decreasingTimeLeft - 1;
-                // if (decreasingTimeLeft === 0) {
-                //     notif.current.play();
-                //      extraTimerStarter()
-                //     clearInterval(timer);
-                //  }
+                if (decreasingTimeLeft === 0) {
+                    props.setNewTimeLeft(decreasingTimeLeft)
+                    notif.current.play();
+                    extraTimerStarter()
+                clearInterval(newTimerID)
+                setTimerIntervalID(0)
+                }
                 props.setNewTimeLeft(decreasingTimeLeft)
             }, 1000)
-        }  else {timer = clearInterval(timer)}
+
+            setTimerIntervalID(newTimerID);
+            return
         }
+        
+        clearInterval(timerIntervalID)
+        setTimerIntervalID(0)
 
-    let copy = (timeLeft) => {
-        if (!timer) {
-            props.setNewTimeLeft(timeLeft)
-            setTimerIsOn(true)
-            forStory = timeLeft;
-            let decreasingTimeLeft = timeLeft
-            timer = setInterval(() => {
-                decreasingTimeLeft = decreasingTimeLeft - 1;
-                // if (decreasingTimeLeft === 0) {
-                //     notif.current.play();
-                //      extraTimerStarter()
-                //     clearInterval(timer);
-                //  }
-                props.setNewTimeLeft(decreasingTimeLeft)
-            }, 1000)
-        }  else {timer = clearInterval(timer)
         }
-    }
-
-    let decreasingTimeLeft
-
-    let chann = () => {
-        console.log(decreasingTimeLeft)
-}
-
-    let preChann = (timeLeft) => {
-        props.setNewTimeLeft(timeLeft)
-        setTimerIsOn(true)
-        forStory = timeLeft;
-        decreasingTimeLeft = timeLeft
-    }
-
-
-    function showAlert (){
-        timer = setInterval(chann, 1000)
-    }
-
-    function disableAlert(){
-        clearInterval(timer)
-        setTimerIsOn(false)
-    }
-
 
     let stopNoSave = () => {
         stopTimer()
@@ -105,15 +83,16 @@ let TimerWrapper = (props) => {
         props.setAllTimeRecording(forRecord)
         stopTimer()
         props.timerIsOn(false)
-        alert('История сохранена!')
-
     }
 
     let openModal = () => {
         if (timerIsOn === true || timerIsPaused === true) {
-            setTimerInterval(null)
-            clearInterval(extraTimer)
-            extraTimer = null
+            clearInterval(timerIntervalID)
+            setTimerIntervalID(0)
+
+            clearInterval(extraTimerID)
+            setExtraTimerID(0)
+    
             setModalActive(true)
         } else {
             alert('Таймер не включён')
@@ -122,15 +101,20 @@ let TimerWrapper = (props) => {
 
     let stopTimer = () => {
         props.setNewTimeLeft(null)
-        clearInterval(timer)
-        clearInterval(extraTimer)
-        extraTimer = null
-        setExtraTime(0)
+
+        clearInterval(timerIntervalID)
+        setTimerIntervalID(0)
+
+        clearInterval(extraTimerID)
+        setExtraTimerID(0)
     }
 
     let pauseTimer = () => {
-        clearInterval(timer)
-        timer=setInterval(()=>{console.log('s')}, 1000)
+        clearInterval(timerIntervalID)
+        setTimerIntervalID(0)
+
+        clearInterval(extraTimerID)
+        setExtraTimerID(0)
     }
 
     let resumeTimer = () => {
@@ -165,25 +149,20 @@ let TimerWrapper = (props) => {
                 <Display timeLeft={props.timeLeft} extraTime={extraTime}/>
             </div>
 
-            <button onClick={()=> {
-                preChann(10)
-                showAlert()
-            }}>Включить</button>
-            <button onClick={disableAlert}>Выключить</button>
             <div className='buttons'>
                 <Button time='1'
                         isDisabled={timerIsOn}
                         startTimer={startTimer}
-                        timer={timer}
+                        timer={timerIntervalID}
                         setNewTimeLeft={props.setNewTimeLeft}/>
                 <Button time='10'
                         startTimer={startTimer}
-                        timer={timer}
+                        timer={timerIntervalID}
                         isDisabled={timerIsOn}
                         setNewTimeLeft={props.setNewTimeLeft}/>
                 <Button time='15'
                         startTimer={startTimer}
-                        timer={timer}
+                        timer={timerIntervalID}
                         isDisabled={timerIsOn}
                         setNewTimeLeft={props.setNewTimeLeft}/>
             </div>
@@ -192,7 +171,7 @@ let TimerWrapper = (props) => {
 
         <div className='timeInputComponent'>
             <TimeInput
-                timer={timer}
+                timer={timerIntervalID}
                 isDisabled={timerIsOn}
                 startPauseResume={startPauseResume}
                 timeLeft={props.timeLeft}

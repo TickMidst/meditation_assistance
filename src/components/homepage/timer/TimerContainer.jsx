@@ -1,6 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import TimerWrapper from './Timer'
+import TestNewTimer from './Timer'
 import {chooseSongIndexAC, chooseCurrentSongAC, timerIsOnAC, setNewTimeLeftAC, pauseMusicAC, setNewSessionsHistoryAC, setAllTimeRecordingAC} from './../../../store/store'
 
 const mapStateToProps = (state) => {
@@ -51,7 +51,7 @@ const mapStateToProps = (state) => {
 
 
 
-const TimerContainer = connect(mapStateToProps, mapDispatchToProps)(TimerWrapper)
+const TimerContainer = connect(mapStateToProps, mapDispatchToProps)(TestNewTimer)
 
 
 

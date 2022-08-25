@@ -44,8 +44,6 @@ function HighScoreMeditation(props) {
             return firstDay !== undefined
         })
 
-    console.log(newTry)
-
     const arrLengths = []
 
     for (let i = 0; i < newTry.length; i++) {
@@ -62,10 +60,12 @@ function HighScoreMeditation(props) {
 
 
 
-    return <div className="backing fields HighScoreMeditation">
+    return history.length !== 0 ? <div className="backing fields historyElems">
         <h3>Ваш рекорд медитации:</h3>
         <h2> {theGreatest} дней </h2>
-    </div>
+    </div> 
+    :
+    <div></div>
 
 }
 

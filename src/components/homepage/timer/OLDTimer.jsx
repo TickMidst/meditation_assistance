@@ -5,8 +5,7 @@ import Display from '../Display/Display'
 import TimeInput from '../TimeInput/TimeInput'
 import Modal from '../Modal/Modal'
 import {setNewSessionsHistoryAC, setNewTimeLeftAC, timerIsOnAC, pauseMusicAC, setAllTimeRecordingAC} from './../../../store/store'
-import s from './Timer.module.css'
-
+/* import s from './Timer.module.css' */
     class TimerWrapper extends React.Component {
          constructor(props) {
           super(props)
@@ -122,36 +121,36 @@ import s from './Timer.module.css'
         }
 
     render() {
-         return   <div className={s.timer}>
-                         <h2 className={s.title}>Timer</h2>
-            <Button className={s.timeButton} time='0.1'
+         return   <div >
+                         <h2 >Timer</h2>
+            <Button  time='0.1'
                         startTimer={this.startTimer}
                         timer={this.timer}
                         dispatch={this.props.dispatch}
                         setNewTimeLeftAC={setNewTimeLeftAC}/>
-            <Button className={s.timeButton} time='1'
+            <Button  time='1'
                         startTimer={this.startTimer}
                         timer={this.timer}
                         dispatch={this.props.dispatch}
                         setNewTimeLeftAC={setNewTimeLeftAC}/>
-            <Button className={s.timeButton} time='10' 
+            <Button  time='10' 
                         startTimer={this.startTimer}
                         timer={this.timer}
                         dispatch={this.props.dispatch}
                         setNewTimeLeftAC={setNewTimeLeftAC}/>
-            <Button className={s.timeButton} time='15' 
+            <Button  time='15' 
                         startTimer={this.startTimer}
                         timer={this.timer} 
                         dispatch={this.props.dispatch}
                         setNewTimeLeftAC={setNewTimeLeftAC}/>
-            <TimeInput className={s.timeInput}
+            <TimeInput 
                         timer={this.timer} 
                         openModal={this.openModal}
                         startPauseResume={this.startPauseResume}
                         timeLeft={this.props.timeLeft}
                         timerIsOn={this.state.timerIsOn}
                         />
-            <Display className={s.Display} timeLeft={this.props.timeLeft} extraTime={this.state.extraTime}/>
+            <Display  timeLeft={this.props.timeLeft} extraTime={this.state.extraTime}/>
             <audio ref={this.notif} preload='auto' src={sound}> </audio>
 
 

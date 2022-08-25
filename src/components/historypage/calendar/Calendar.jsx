@@ -1,4 +1,4 @@
-import './Calendar.css'
+/* import './Calendar.css'
 import './../../backing.css'
 
 let Calendar = (props) => {
@@ -81,6 +81,7 @@ let Calendar = (props) => {
         }
     }
     let prevM = currentMonth - 1
+    let prevPrevM = currentMonth - 2
 
     // проверяет следующий год
     let checkNextYear = (nextM) => {
@@ -92,9 +93,10 @@ let Calendar = (props) => {
     }
     let nextM = currentMonth + 1
 
+    let prevPrevMonth = createCalendar(checkLastYear(prevPrevM) ? 12 : prevPrevM, checkLastYear(prevPrevM) ? currentYear - 1 : currentYear)
     let prevMonth = createCalendar(checkLastYear(prevM) ? 12 : prevM, checkLastYear(prevM) ? currentYear - 1 : currentYear)
     let ongoingMonth = createCalendar(currentMonth, currentYear)
-    let nextMonth = createCalendar(nextM, checkNextYear(nextM) ? currentYear + 1 : currentYear)
+     let nextMonth = createCalendar(nextM, checkNextYear(nextM) ? currentYear + 1 : currentYear) 
 
     return (
         <div>
@@ -115,7 +117,7 @@ let Calendar = (props) => {
 
                 <div className='one_Month_container'>
                     <div>
-                        {nextMonth}
+                         {prevPrevMonth}
                     </div>
                 </div>
             </div>
@@ -123,4 +125,4 @@ let Calendar = (props) => {
     )
 }
 
-export default Calendar
+export default Calendar */

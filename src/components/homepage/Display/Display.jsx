@@ -1,18 +1,23 @@
 import React, { useEffect, useRef } from 'react' 
+import { useState } from 'react'
 import './Display.css'
 
         let Display = (props) => {
-            let isTimeLeftOrExtraTime = false
 
             useEffect (() => {
+                
                 if (props.timeLeft <= 0) {
-                    isTimeLeftOrExtraTime = true
+                    setIsTimeLeftOrExtraTime(true)
                 } else {
-                    isTimeLeftOrExtraTime = false
+                    setIsTimeLeftOrExtraTime(false)
                 }
             })
-                  
-                let toMinAndSecs = function(digit) {
+            
+            let [isTimeLeftOrExtraTime, setIsTimeLeftOrExtraTime] = useState(false)
+
+
+            let toMinAndSecs = function(digit) {
+                
                         let rawHours = Math.floor(digit/60/60)
                         let rawMins = Math.floor(digit/60) - (rawHours*60);
                         let rawSecs = digit % 60
@@ -23,7 +28,6 @@ import './Display.css'
                             rawHours = ''
                         }
                         let rawDigit = rawHours + ' ' + rawMins + ' ' + rawSecs;
-                        let rawDigitArray = [rawHours, ,rawMins, rawSecs]
                         return rawDigit
                     } 
 
@@ -39,7 +43,7 @@ import './Display.css'
                 <div className='timerText'>
                 <h1>Осталось времени:</h1> 
                 </div>
-                {(isTimeLeftOrExtraTime === true) 
+                {(isTimeLeftOrExtraTime) 
                 ? <div className='timeLeft'><h2>+{toMinAndSecs(props.extraTime)}</h2> </div>   
                 : <div className='timeLeft'><h2> {toMinAndSecs(props.timeLeft)} </h2> </div>
                 } 

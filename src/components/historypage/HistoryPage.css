@@ -9,7 +9,6 @@
 
 .infoDate {
     display: flex;
-
     flex-flow: row wrap;
 }
 
@@ -17,10 +16,17 @@
 
 .fields {
     padding: 10px;
-    margin: 10px 10px;
+    margin: 10px;
     font-family: 'Comfortaa';
 }
 
-.topPageElement {
+@media (max-width: 768px) {
+    .infoDate {
+        display: flex;
+        flex-direction: column;
+        width: 70%;
+        margin: 10px auto;
+    }
+
 
 }

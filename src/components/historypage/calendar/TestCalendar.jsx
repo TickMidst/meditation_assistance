@@ -81,7 +81,8 @@ let TestCalendar = (props) => {
         }
     }
     let prevM = currentMonth - 1
-
+    let prevPrevM = currentMonth - 2
+    
     // проверяет следующий год
     let checkNextYear = (nextM) => {
         if (nextM > 12) {
@@ -92,26 +93,28 @@ let TestCalendar = (props) => {
     }
     let nextM = currentMonth + 1
 
+    let prevPrevMonth = createCalendar(checkLastYear(prevPrevM) ? 12 : prevPrevM, checkLastYear(prevPrevM) ? currentYear - 1 : currentYear)
     let prevMonth = createCalendar(checkLastYear(prevM) ? 12 : prevM, checkLastYear(prevM) ? currentYear - 1 : currentYear)
     let ongoingMonth = createCalendar(currentMonth, currentYear)
-    let nextMonth = createCalendar(nextM, checkNextYear(nextM) ? currentYear + 1 : currentYear)
+/*     let nextMonth = createCalendar(nextM, checkNextYear(nextM) ? currentYear + 1 : currentYear) */
 
     return (
-        <div>
+        <div className='calendar_wrap'>
             <div className='calendar_Header'>
                 <h1>КАЛЕНДАЛЬ</h1>
             </div>
             <div className='calendar_container'>
+
+                <div className='one_Month_container'>
+                    {prevPrevMonth}
+                </div>
+
                 <div className='one_Month_container'>
                     {prevMonth}
                 </div>
 
                 <div className='one_Month_container'>
                     {ongoingMonth}
-                </div>
-
-                <div className='one_Month_container'>
-                    {nextMonth}
                 </div>
             </div>
         </div>

@@ -6,7 +6,7 @@ import green_tea from './../assets/sounds/green-tea.mp3'
 const initialState = {
     timeLeft: null,
     sessionsHistory: [],
-    allTimeRecording: null,
+    allTimeRecording: 0,
     autoplayIsOn: false,
     rawSongNames: [Infinitely, Spatium, green_tea],
     currentSong: Infinitely,
