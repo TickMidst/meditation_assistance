@@ -5,6 +5,7 @@ import Header from './components/header/Header';
 import Footer from './components/footer/Footer';
 import HomePage from './components/homepage/HomePage';
 import {SignUpPage} from './components/signup/Signup';
+import {SignInPage} from './components/signin/SignIn';
 
 
 const App = () => {
@@ -21,6 +22,7 @@ const App = () => {
       <Route path='/homepage' element={<HomePage />}  /> 
       <Route path='/historypage' element={<HistoryPageContainer />} /> 
       <Route path='/signup' element={<SignUpPage />} /> 
+      <Route path='/signin' element={<SignInPage />} /> 
        </Routes> 
     </div>
     

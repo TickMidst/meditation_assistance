@@ -34,7 +34,8 @@ const Header = () => {
             </div>
             <NavLink to='/homepage/' ><img className='logoImg' src={logo}  /></NavLink>
             <ul className='burgerMenu' >
-              <li><NavLink to='/signup/'>Регистрация</NavLink></li>
+              <li><NavLink to='/signin/'>Войти</NavLink></li>
+              <li><NavLink to='/signup/'>Зарегистрироваться</NavLink></li>
               <li><NavLink to='/homepage/' >Главная страница</NavLink></li>
               <li><NavLink to='/historypage/' >Личный кабинет</NavLink></li>
             </ul>
@@ -42,31 +43,11 @@ const Header = () => {
         </div>
       </nav>
       <div className={popupStatus}><ul className='burgerMenu' id='burgerMenu'>
+        <li onClick={hambDivHandler}><NavLink to='/signin/'>Войти</NavLink></li>
         <li onClick={hambDivHandler}><NavLink to='/signup/'>Регистрация</NavLink></li>
         <li onClick={hambDivHandler}><NavLink to='/homepage/' >Главная страница</NavLink></li>
         <li onClick={hambDivHandler}><NavLink to='/historypage/' >Личный кабинет</NavLink></li>
       </ul></div>
-
-  {/*<header className='header'>*/}
-  {/*  <div className='headerHeader'>*/}
-  {/*    <div className='logoEl'>*/}
-  {/*    <NavLink to='/homepage/' ><img className='logoImg' src={logo}  /></NavLink>*/}
-  {/*    </div>*/}
-  {/*    <div className='headerElements'>*/}
-  {/*    <div className='itemSU'>*/}
-  {/*      <NavLink to='/signup/'>Регистрация</NavLink>*/}
-  {/*      </div>*/}
-  {/*      <div className='itemSU'>*/}
-  {/*      <NavLink to='/homepage/' >Главная страница</NavLink>*/}
-  {/*      </div>*/}
-
-  {/*      <div className='itemSU'>*/}
-  {/*      <NavLink to='/historypage/' >Личный кабинет</NavLink>*/}
-  {/*      </div>*/}
-  {/*      </div>*/}
-  {/*      </div>*/}
-
-  {/*    </header>*/}
     </div>
 }
 

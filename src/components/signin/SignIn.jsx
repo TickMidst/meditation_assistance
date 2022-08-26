@@ -1,19 +1,18 @@
-import './Signup.css'
+import './SignIn.css'
 
-export let SignUpPage = () => {
+export let SignInPage = () => {
     return <div className='signUpContainer'>
         <div className='signUpTitleCont'>
-        <h1>Страница регистрации</h1>
+        <h1>Страница входа</h1>
         </div>
 
         <div className='signUpInputCont'>
         <input type='text' placeholder='Логин'></input>
         <input type='email' placeholder='Адрес почты'></input>
         <input type='text' placeholder='Пароль'></input>
-        <input type='text' placeholder='Повторите пароль'></input>
 
     
-        <button>Регистрация</button>
+        <button>Войти</button>
 
         </div>
     </div>
