@@ -1,14 +1,16 @@
 import { createStore } from "redux";
-import Infinitely from './../assets/sounds/infinitely.mp3'
+import Infinitely from './../assets/sounds/Infinitely.mp3'
 import Spatium from './../assets/sounds/Spatium.mp3'
-import green_tea from './../assets/sounds/green-tea.mp3'
+import GreenTea from './../assets/sounds/Tea.mp3'
 
 const initialState = {
     timeLeft: null,
     sessionsHistory: [],
     allTimeRecording: 0,
     autoplayIsOn: false,
-    rawSongNames: [Infinitely, Spatium, green_tea],
+
+    
+    rawSongNames: [Infinitely, Spatium, GreenTea],
     currentSong: Infinitely,
     songIndex: 0,
     timerIsOn: false,

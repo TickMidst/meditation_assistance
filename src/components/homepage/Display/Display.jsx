@@ -5,8 +5,8 @@ import './Display.css'
         let Display = (props) => {
 
             useEffect (() => {
-                
-                if (props.timeLeft <= 0) {
+            
+                if (props.timeLeft === 0) {
                     setIsTimeLeftOrExtraTime(true)
                 } else {
                     setIsTimeLeftOrExtraTime(false)
@@ -28,6 +28,7 @@ import './Display.css'
                             rawHours = ''
                         }
                         let rawDigit = rawHours + ' ' + rawMins + ' ' + rawSecs;
+                        
                         return rawDigit
                     } 
 

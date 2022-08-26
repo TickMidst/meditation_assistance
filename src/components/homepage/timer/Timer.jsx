@@ -21,22 +21,15 @@ let TimerWrapper = (props) => {
     let extraTimer
     let notif = useRef()
     
-
-
     let nowDate = new Date();
     let year = nowDate.getFullYear();
     let month = nowDate.getMonth() + 1;
     let day = nowDate.getDate();
     let lateDate = day + '.' + month + '.' + year
 
-
-
-
-    let extraTimerStarter =()=> {
+    let extraTimerStarter =(decreasingTimeLeft)=> {
         const newExtraTimerID = setInterval(() => {
-                setExtraTime(extraTime++)
-                console.log(extraTime)
-                
+                setExtraTime(decreasingTimeLeft++)               
         }, 1000)
 
         setExtraTimerID(newExtraTimerID)
@@ -45,8 +38,8 @@ let TimerWrapper = (props) => {
 
     let startTimer = (timeLeft) => {
         if (!timerIntervalID) {
-            
             props.setNewTimeLeft(timeLeft)
+            props.timerIsOn(true)
             setTimerIsOn(true)
             setForStory(timeLeft)
             let decreasingTimeLeft = timeLeft
@@ -55,9 +48,10 @@ let TimerWrapper = (props) => {
                 if (decreasingTimeLeft === 0) {
                     props.setNewTimeLeft(decreasingTimeLeft)
                     notif.current.play();
-                    extraTimerStarter()
-                clearInterval(newTimerID)
-                setTimerIntervalID(0)
+                    extraTimerStarter(decreasingTimeLeft + 1)
+                    clearInterval(newTimerID)
+                    setTimerIntervalID(0)
+                    return
                 }
                 props.setNewTimeLeft(decreasingTimeLeft)
             }, 1000)
@@ -107,6 +101,7 @@ let TimerWrapper = (props) => {
 
         clearInterval(extraTimerID)
         setExtraTimerID(0)
+        setTimerIsOn(false)
     }
 
     let pauseTimer = () => {
@@ -115,6 +110,7 @@ let TimerWrapper = (props) => {
 
         clearInterval(extraTimerID)
         setExtraTimerID(0)
+        props.timerIsOn(false)
     }
 
     let resumeTimer = () => {
@@ -150,17 +146,17 @@ let TimerWrapper = (props) => {
             </div>
 
             <div className='buttons'>
-                <Button time='1'
-                        isDisabled={timerIsOn}
-                        startTimer={startTimer}
-                        timer={timerIntervalID}
-                        setNewTimeLeft={props.setNewTimeLeft}/>
                 <Button time='10'
+                        isDisabled={timerIsOn}
                         startTimer={startTimer}
                         timer={timerIntervalID}
-                        isDisabled={timerIsOn}
                         setNewTimeLeft={props.setNewTimeLeft}/>
                 <Button time='15'
+                        startTimer={startTimer}
+                        timer={timerIntervalID}
+                        isDisabled={timerIsOn}
+                        setNewTimeLeft={props.setNewTimeLeft}/>
+                <Button time='30'
                         startTimer={startTimer}
                         timer={timerIntervalID}
                         isDisabled={timerIsOn}

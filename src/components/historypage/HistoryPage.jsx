@@ -1,6 +1,5 @@
 import React from "react"
 import AllTimeRecording from "./AllTimeRecording/AllTimeRecording"
-import CalendarContainer from "./calendar/CalendarContainer"
 import HighScoreMeditation from "./HighScoreMeditation/HighScoreMeditation"
 import HistoryElement from "./HistoryElement/HistoryElement"
 import './HistoryPage.css'
