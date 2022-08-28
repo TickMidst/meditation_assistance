@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/meditation_assistance/static/css/main.01168489.chunk.css",
-    "main.js": "/meditation_assistance/static/js/main.6d027fb6.chunk.js",
-    "main.js.map": "/meditation_assistance/static/js/main.6d027fb6.chunk.js.map",
+    "main.js": "/meditation_assistance/static/js/main.674d58f5.chunk.js",
+    "main.js.map": "/meditation_assistance/static/js/main.674d58f5.chunk.js.map",
     "runtime-main.js": "/meditation_assistance/static/js/runtime-main.d831557a.js",
     "runtime-main.js.map": "/meditation_assistance/static/js/runtime-main.d831557a.js.map",
     "static/js/2.0fd8c59c.chunk.js": "/meditation_assistance/static/js/2.0fd8c59c.chunk.js",
@@ -31,6 +31,6 @@
     "static/js/runtime-main.d831557a.js",
     "static/js/2.0fd8c59c.chunk.js",
     "static/css/main.01168489.chunk.css",
-    "static/js/main.6d027fb6.chunk.js"
+    "static/js/main.674d58f5.chunk.js"
   ]
 }
