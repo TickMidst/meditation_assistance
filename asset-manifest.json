@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/meditation_assistance/static/css/main.75809537.chunk.css",
-    "main.js": "/meditation_assistance/static/js/main.79797d3d.chunk.js",
-    "main.js.map": "/meditation_assistance/static/js/main.79797d3d.chunk.js.map",
-    "runtime-main.js": "/meditation_assistance/static/js/runtime-main.3846c1da.js",
-    "runtime-main.js.map": "/meditation_assistance/static/js/runtime-main.3846c1da.js.map",
+    "main.css": "/meditation_assistance/static/css/main.134acfb7.chunk.css",
+    "main.js": "/meditation_assistance/static/js/main.bea1bfc6.chunk.js",
+    "main.js.map": "/meditation_assistance/static/js/main.bea1bfc6.chunk.js.map",
+    "runtime-main.js": "/meditation_assistance/static/js/runtime-main.dc7cc590.js",
+    "runtime-main.js.map": "/meditation_assistance/static/js/runtime-main.dc7cc590.js.map",
     "static/js/2.0fd8c59c.chunk.js": "/meditation_assistance/static/js/2.0fd8c59c.chunk.js",
     "static/js/2.0fd8c59c.chunk.js.map": "/meditation_assistance/static/js/2.0fd8c59c.chunk.js.map",
-    "static/js/3.cfb701d3.chunk.js": "/meditation_assistance/static/js/3.cfb701d3.chunk.js",
-    "static/js/3.cfb701d3.chunk.js.map": "/meditation_assistance/static/js/3.cfb701d3.chunk.js.map",
+    "static/js/3.627e1ea9.chunk.js": "/meditation_assistance/static/js/3.627e1ea9.chunk.js",
+    "static/js/3.627e1ea9.chunk.js.map": "/meditation_assistance/static/js/3.627e1ea9.chunk.js.map",
     "index.html": "/meditation_assistance/index.html",
-    "static/css/main.75809537.chunk.css.map": "/meditation_assistance/static/css/main.75809537.chunk.css.map",
+    "static/css/main.134acfb7.chunk.css.map": "/meditation_assistance/static/css/main.134acfb7.chunk.css.map",
     "static/js/2.0fd8c59c.chunk.js.LICENSE.txt": "/meditation_assistance/static/js/2.0fd8c59c.chunk.js.LICENSE.txt",
     "static/media/Infinitely.64e3b9e0.mp3": "/meditation_assistance/static/media/Infinitely.64e3b9e0.mp3",
     "static/media/Spatium.1d5b2e2a.mp3": "/meditation_assistance/static/media/Spatium.1d5b2e2a.mp3",
@@ -28,9 +28,9 @@
     "static/media/stop-button.e51170ea.png": "/meditation_assistance/static/media/stop-button.e51170ea.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.3846c1da.js",
+    "static/js/runtime-main.dc7cc590.js",
     "static/js/2.0fd8c59c.chunk.js",
-    "static/css/main.75809537.chunk.css",
-    "static/js/main.79797d3d.chunk.js"
+    "static/css/main.134acfb7.chunk.css",
+    "static/js/main.bea1bfc6.chunk.js"
   ]
 }
